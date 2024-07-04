@@ -1,0 +1,7 @@
+<h1>All companies</h1>
+<% @companies.each do |company| %>
+  <h3>
+    <%= company.name %>
+    <%= link_to 'connect', "connect_to?company_subdomain=#{company.subdomain}" %>
+  </h3>
+<%end%>

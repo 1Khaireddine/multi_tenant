@@ -11,6 +11,8 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  config.hosts << '.lvh.me'
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -49,6 +51,8 @@ Rails.application.configure do
 
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
+
+  config.action_cable.allowed_request_origins = ['*']
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
